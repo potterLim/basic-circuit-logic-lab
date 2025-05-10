@@ -11,5 +11,6 @@
 - [Lab04 - 직렬·병렬·혼합 회로](./lab04-series-parallel)
 - [Lab06 - 조합 논리회로](./lab06-combinational-circuits)
 - [Lab07 - 함수발생기 및 오실로스코프](./lab07-function-generator-oscilloscope)
+- [Lab10 - 최대 전력 전달 조건](./lab10-maximum-power-transfer)
 
 최종 수정일: 2025-04-15

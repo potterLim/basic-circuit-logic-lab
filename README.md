@@ -13,5 +13,6 @@
 - [Lab07 - 함수발생기 및 오실로스코프](./lab07-function-generator-oscilloscope)
 - [Lab10 - 최대 전력 전달 조건](./lab10-maximum-power-transfer)
 - [Lab11 - 중첩원리 및 등가회로](./lab11-superposition-equivalent-circuits)
+- [Lab12 - RC회로](./lab12-rc-transient-response)
 
-최종 수정일: 2025-05-16
+최종 수정일: 2025-05-20

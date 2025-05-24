@@ -14,5 +14,6 @@
 - [Lab10 - 최대 전력 전달 조건](./lab10-maximum-power-transfer)
 - [Lab11 - 중첩원리 및 등가회로](./lab11-superposition-equivalent-circuits)
 - [Lab12 - RC회로](./lab12-rc-transient-response)
+- [Lab13 - 래치 및 플립플롭](./lab13-latch-flip-flop)
 
-최종 수정일: 2025-05-20
+최종 수정일: 2025-05-24

@@ -32,7 +32,7 @@
 | 11        | 중첩원리 및 등가회로         | [lab11-superposition-equivalent-circuits](./lab11-superposition-equivalent-circuits) |
 | 12        | RC회로                       | [lab12-rc-transient-response](./lab12-rc-transient-response)                         |
 | 13        | 래치 및 플립플롭             | [lab13-latch-flip-flop](./lab13-latch-flip-flop)                                     |
-| 14        | 4bit binary Adder 설계       | [lab14-4bit-binary-adder](./lab14-4bit-binary-adder)                                 |
+| 14, 15    | 4bit binary Adder 설계       | [lab14-15-4bit-binary-adder](./lab14-15-4bit-binary-adder)                           |
 
 
-최종 수정일: 2025-06-05
+최종 수정일: 2025-06-12

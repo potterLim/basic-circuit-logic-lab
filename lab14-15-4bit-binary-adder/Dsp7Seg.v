@@ -1,4 +1,3 @@
-
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // 7-Segment Display for Nexys4 DDR
@@ -28,7 +27,8 @@ module Dsp7Seg(
     wire [2:0] act_AN; 	// activate AN one of the eight
     reg [3:0] LED_BCD;	// Bianry Coded Decimal
 	
-    // clock counter ticking with 100MHz input clock
+    // Clock counter ticking with 100MHz input clock
+    // Used to generate slower timing for display multiplexing
     always @(posedge clk or posedge rst) begin
         if (rst==1)
             ref_cnt <=0;
@@ -36,56 +36,58 @@ module Dsp7Seg(
             ref_cnt <= ref_cnt +1;
     end
 	
-	// 100MHz / 2^17 ~ 1.31 ms x 8 = 10.4ms ==> 95 Hz refresh rate
+	// Generate active digit selector (3-bit value to select AN)
+	// 100MHz / 2^17 ~ 1.31 ms x 8 = ~95Hz refresh rate
     assign act_AN = ref_cnt[19:17];	
-    
-	// Periodical activate each 7-segments
-	// shows one of X0 -> X7 at every 1.31 ms sequentially
+	
+	// Periodically activate each 7-segment digit
+	// Rotates through X0 ~ X7, displaying one digit at a time
     always @(*) begin
         case(act_AN)
         3'b000: begin
-            AN = 8'b0111_1111;		//7F
+            AN = 8'b0111_1111;		//7F : Activate AN0
             LED_BCD = X0;
         end
         
         3'b001: begin
-            AN = 8'b1011_1111;
+            AN = 8'b1011_1111;      // Activate AN1
             LED_BCD = X1;
         end
         
         3'b010: begin
-            AN = 8'b1101_1111;
+            AN = 8'b1101_1111;      // Activate AN2
             LED_BCD = X2;
         end
         
         3'b011: begin
-            AN = 8'b1110_1111;
+            AN = 8'b1110_1111;      // Activate AN3
             LED_BCD = X3;
         end
         
         3'b100: begin
-            AN = 8'b1111_0111;
+            AN = 8'b1111_0111;      // Activate AN4
             LED_BCD = X4;
         end
         
         3'b101: begin
-            AN = 8'b1111_1011;
+            AN = 8'b1111_1011;      // Activate AN5
             LED_BCD = X5;
         end
         
         3'b110: begin
-            AN = 8'b1111_1101;
+            AN = 8'b1111_1101;      // Activate AN6
             LED_BCD = X6;
         end
         
         3'b111:begin
-            AN = 8'b1111_1110;
+            AN = 8'b1111_1110;      // Activate AN7
             LED_BCD = X7;
         end
         endcase      
     end
     
-    // BCD 7segment output
+    // BCD to 7-segment display encoding
+    // Converts 4-bit binary input into segment control signals
     always @(*) begin
         case(LED_BCD)
             4'b0000: dsp = 8'b1000_0001;    //0 : 0x81
@@ -108,4 +110,3 @@ module Dsp7Seg(
     end
     
 endmodule
-

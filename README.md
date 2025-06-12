@@ -25,8 +25,7 @@
 | 02        | 옴의 법칙                    | [lab02-ohms-law](./lab02-ohms-law)                                                   |
 | 03        | 기본 논리 게이트             | [lab03-logic-gates](./lab03-logic-gates)                                             |
 | 04        | 직렬·병렬·혼합 회로          | [lab04-series-parallel](./lab04-series-parallel)                                     |
-| 05        | 조합 논리회로 1              | [lab05-combinational-circuits-1](./lab05-combinational-circuits-1)                   |
-| 06        | 조합 논리회로 2              | [lab06-combinational-circuits-2](./lab06-combinational-circuits-2)                   |
+| 05, 06    | 조합 논리회로                | [lab05-06-combinational-circuits](./lab05-06-combinational-circuits)                 |
 | 07        | 함수발생기 및 오실로스코프   | [lab07-function-generator-oscilloscope](./lab07-function-generator-oscilloscope)     |
 | 09        | Python을 이용한 EEboard 제어 | [lab09-python-eeboard-control](./lab09-python-eeboard-control)                       |
 | 10        | 최대 전력 전달 조건          | [lab10-maximum-power-transfer](./lab10-maximum-power-transfer)                       |

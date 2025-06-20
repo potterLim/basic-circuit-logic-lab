@@ -20,7 +20,7 @@
 
 | 실습 주차 | 주제                         | 경로                                                                                 |
 | --------- | ---------------------------- | ------------------------------------------------------------------------------------ |
-| 01        | EEboard 소개 및 기본 실습    | [lab01-eeboard-introduction](./lab01-eeboard-introduction)                           |
+| 01        | EEboard 소개                 | [lab01-eeboard-introduction](./lab01-eeboard-introduction)                           |
 | 02        | 옴의 법칙                    | [lab02-ohms-law](./lab02-ohms-law)                                                   |
 | 03        | 기본 논리 게이트             | [lab03-logic-gates](./lab03-logic-gates)                                             |
 | 04        | 직렬·병렬·혼합 회로          | [lab04-series-parallel](./lab04-series-parallel)                                     |
